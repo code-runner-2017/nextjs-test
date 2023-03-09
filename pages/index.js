@@ -13,22 +13,26 @@ export default function Home(props) {
       </Head>
 
       <main>
+        {/*
+      <img src={url} sizes="(max-width: 768px) 100vw, 50vw"
+		        srcset={url + '?imwidth=800 50wm, '+ url +'?imwidth=1600 50wm'} />
+    */}
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <Image
-                src={url}
-                alt="Picture of the author"
-                width='500'
-                height='500'
-                loader={akamaiImageLoader}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+        <div className='container'>
+            
+            <Image
+                    src={url}
+                    alt="prova prova"
+                    width='500'
+                    height='500'
+                    loader={akamaiImageLoader}
+                    sizes="(max-width: 768px) 100vw, (max-width: 768px) 100vw, 100vw"
             />
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+            
+        </div>
 
         <div className="grid">
           {props.data.map(val => ( 
