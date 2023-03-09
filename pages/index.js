@@ -184,6 +184,24 @@ export default function Home(props) {
   )
 }
 
+export async function getStaticProps(context) {
+    const res = await fetch('https://jsonplaceholder.typicode.com/albums')
+    const data = await res.json()
+  
+    if (!data) {
+        return {
+            notFound: true,
+        }
+    }
+    
+    return {
+      props: {
+        // props for your component, that will be passed to the page component as props
+        data: data
+      }
+    }
+  }
+/*
 export async function getServerSideProps(context) {
   const res = await fetch('https://jsonplaceholder.typicode.com/albums')
   const data = await res.json()
@@ -201,3 +219,4 @@ export async function getServerSideProps(context) {
     }
   }
 }
+*/
