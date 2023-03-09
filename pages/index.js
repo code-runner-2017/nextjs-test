@@ -1,7 +1,11 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import akamaiImageLoader from '../akamaiImageLoader';
 
 export default function Home(props) {
-  return (
+    const url = 'https://demo.discoveryreplymedia.com/media-staging/6/6/42a238bd-80fc-4619-838a-4788936c2e41/083ba45a-5ddd-490f-bb4d-ea3ed9c39925.jpg';
+
+    return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
@@ -12,6 +16,15 @@ export default function Home(props) {
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <Image
+                src={url}
+                alt="Picture of the author"
+                width='500'
+                height='500'
+                loader={akamaiImageLoader}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            />
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>

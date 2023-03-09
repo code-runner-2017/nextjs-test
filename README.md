@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+This is a sample Next.js project committed to my github account to test Vercel deployment.
