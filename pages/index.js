@@ -21,13 +21,13 @@ export default function Home(props) {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <div className='container'>
+        <div className='image'>
             
             <Image
                     src={url}
                     alt="prova prova"
-                    width='500'
-                    height='500'
+                    width="3000"
+                    height="3000"
                     loader={akamaiImageLoader}
                     sizes="(max-width: 768px) 100vw, (max-width: 768px) 100vw, 100vw"
             />
@@ -120,6 +120,11 @@ export default function Home(props) {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+        }
+
+        .image {
+            width: 80%;
+            height: 600px;
         }
 
         code {
